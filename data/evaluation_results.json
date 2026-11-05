@@ -1,0 +1,124 @@
+{
+  "timestamp": "2026-11-05T08:13:17.284473+00:00",
+  "total_scenarios": 6,
+  "passed": 6,
+  "failed": 0,
+  "validation_pass_rate": 100.0,
+  "average_execution_time": 13.48,
+  "priority_distribution": {
+    "Critical": 0,
+    "High": 3,
+    "Medium": 1,
+    "Low": 1
+  },
+  "error_handling_results": {
+    "scenario_name": "Error Handling - Non-Existent Transaction Identifier",
+    "transaction_id": "TXN-99999",
+    "handled_gracefully": true,
+    "status": "failed",
+    "duration_ms": 15.1,
+    "error_message": "Transaction TXN-99999 not found"
+  },
+  "results": [
+    {
+      "scenario_name": "High Risk - Extreme Amount & Unrecognized Merchant",
+      "transaction_id": "TXN-10198",
+      "passed": true,
+      "duration_ms": 20.85,
+      "expected_min_priority": "High",
+      "actual_priority": "High",
+      "actual_score": 60,
+      "expected_indicators": [
+        "high_amount",
+        "new_merchant",
+        "unusual_time"
+      ],
+      "actual_indicators": [
+        "high_amount",
+        "new_merchant",
+        "unusual_time"
+      ],
+      "failure_reasons": []
+    },
+    {
+      "scenario_name": "High Risk - Multiple Compound Anomalies",
+      "transaction_id": "TXN-10471",
+      "passed": true,
+      "duration_ms": 12.07,
+      "expected_min_priority": "High",
+      "actual_priority": "High",
+      "actual_score": 75,
+      "expected_indicators": [
+        "high_amount",
+        "failed_attempts",
+        "new_merchant"
+      ],
+      "actual_indicators": [
+        "high_amount",
+        "new_merchant",
+        "failed_attempts",
+        "unusual_time"
+      ],
+      "failure_reasons": []
+    },
+    {
+      "scenario_name": "Medium Risk - Multiple Failed Authorization Attempts",
+      "transaction_id": "TXN-10015",
+      "passed": true,
+      "duration_ms": 10.76,
+      "expected_min_priority": "Medium",
+      "actual_priority": "Medium",
+      "actual_score": 35,
+      "expected_indicators": [
+        "failed_attempts"
+      ],
+      "actual_indicators": [
+        "new_merchant",
+        "failed_attempts"
+      ],
+      "failure_reasons": []
+    },
+    {
+      "scenario_name": "Medium Risk - Nocturnal Window Activity",
+      "transaction_id": "TXN-10016",
+      "passed": true,
+      "duration_ms": 10.58,
+      "expected_min_priority": "Medium",
+      "actual_priority": "High",
+      "actual_score": 60,
+      "expected_indicators": [
+        "unusual_time"
+      ],
+      "actual_indicators": [
+        "high_amount",
+        "new_merchant",
+        "unusual_time"
+      ],
+      "failure_reasons": []
+    },
+    {
+      "scenario_name": "Low Risk - Routine Daytime Transaction",
+      "transaction_id": "TXN-10078",
+      "passed": true,
+      "duration_ms": 11.5,
+      "expected_min_priority": "Low",
+      "actual_priority": "Low",
+      "actual_score": 0,
+      "expected_indicators": [],
+      "actual_indicators": [],
+      "failure_reasons": []
+    },
+    {
+      "scenario_name": "Error Handling - Non-Existent Transaction Identifier",
+      "transaction_id": "TXN-99999",
+      "passed": true,
+      "duration_ms": 15.1,
+      "expected_min_priority": "Low",
+      "actual_priority": "Low",
+      "actual_score": 0,
+      "expected_indicators": [],
+      "actual_indicators": [],
+      "failure_reasons": []
+    }
+  ]
+}

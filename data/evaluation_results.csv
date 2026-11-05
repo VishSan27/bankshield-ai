@@ -1,0 +1,7 @@
+scenario_name,transaction_id,passed,duration_ms,expected_min_priority,actual_priority,actual_score,expected_indicators,actual_indicators,failure_reasons
+High Risk - Extreme Amount & Unrecognized Merchant,TXN-10198,True,20.85,High,High,60,high_amount;new_merchant;unusual_time,high_amount;new_merchant;unusual_time,
+High Risk - Multiple Compound Anomalies,TXN-10471,True,12.07,High,High,75,high_amount;failed_attempts;new_merchant,high_amount;new_merchant;failed_attempts;unusual_time,
+Medium Risk - Multiple Failed Authorization Attempts,TXN-10015,True,10.76,Medium,Medium,35,failed_attempts,new_merchant;failed_attempts,
+Medium Risk - Nocturnal Window Activity,TXN-10016,True,10.58,Medium,High,60,unusual_time,high_amount;new_merchant;unusual_time,
+Low Risk - Routine Daytime Transaction,TXN-10078,True,11.5,Low,Low,0,,,
+Error Handling - Non-Existent Transaction Identifier,TXN-99999,True,15.1,Low,Low,0,,,
