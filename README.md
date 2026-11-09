@@ -204,6 +204,19 @@ streamlit run app.py
 The application opens automatically in your browser at:
 `http://localhost:8501`
 
+### Step 6: Cloud Deployment (Optional)
+
+#### Option A: Streamlit Community Cloud (Recommended)
+1. Push this repository to GitHub.
+2. Sign in to [share.streamlit.io](https://share.streamlit.io) with your GitHub account.
+3. Click **New app**, select your repository, set branch to `main`, and main file path to `app.py`.
+4. Click **Deploy!**
+
+#### Option B: Render Web Service
+1. Create a new **Web Service** on [render.com](https://render.com) linked to your repository.
+2. Set Build Command: `pip install -r requirements.txt`
+3. Set Start Command: `streamlit run app.py --server.port $PORT --server.address 0.0.0.0 --server.headless true`
+
 ---
 
 ## 5. Demonstration Walkthrough

@@ -108,7 +108,7 @@ def generate_executive_narrative(
     chosen_model = model_name or (installed_models[0] if installed_models else DEFAULT_MODEL)
 
     prompt = (
-        f"You are BankShield AI, a compliance and risk investigation assistant for banking analysts.\n"
+        f"You are BankShield AI, an autonomous risk investigation system for banking compliance analysts.\n"
         f"Summarize the following verified investigation evidence into an objective 2-paragraph decision-support briefing.\n"
         f"CRITICAL RULES: Do NOT invent transactions, do NOT claim definitive fraud, refer only to provided indicators.\n\n"
         f"Transaction ID: {txn_id}\n"
